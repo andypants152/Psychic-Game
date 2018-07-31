@@ -18,10 +18,13 @@ document.onkeyup = function(event) {
     //get the pressed key
     var playerGuess = event.key;
 
-    console.log(computerGuess);
+    //console.log(computerGuess);
 
+    //check to make sure the guess is a letter, and hasn't been guessed yet
     if (computerChoices.indexOf(playerGuess) != -1 && playerChoices.indexOf(playerGuess) == -1){
+        //if it's the computer's letter you win!
         if (playerGuess === computerGuess){
+            //reset the computer guess to something new, along with player guesses, and chances and increase wins
             computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             wins++;
             playerChoices = [];
@@ -30,13 +33,16 @@ document.onkeyup = function(event) {
             displayedGuesses.textContent = playerChoices;
             displayedChances.textContent = chances;
         }
+        //otherwise lower number of chances
         else{
             chances--;
+            //if the player still has more chances, add their guess to the array of choices and update the page
             if (chances > 0){
                 playerChoices.push(playerGuess);
                 displayedGuesses.textContent = playerChoices;
                 displayedChances.textContent = chances;
             }
+            //otherwise reset the computer guess, increase losses, and reset player choices and chances and update the page
             else{
                 computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
                 losses++;
