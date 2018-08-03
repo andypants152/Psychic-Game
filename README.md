@@ -8,20 +8,7 @@ View the project [Here](https://andypants152.github.io/Psychic-Game/)
 
 ### Prerequisites
 
-You need to have a modern browser able to handle html5 and css. 
-
-Some popular browsers are:
-```
-Google Chrome
-Mozilla Firefox
-Safari
-Opera
-Edge
-```
-
-### Installing
-
-No installation needed! Just open the page in your preferred browser.
+All you need is a modern web browser
 
 ## Built With
 
